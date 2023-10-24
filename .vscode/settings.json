@@ -75,7 +75,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "vector.h": "c"
     }
     // "go.inferGopath": false,
 }
