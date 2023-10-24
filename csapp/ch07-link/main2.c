@@ -19,4 +19,10 @@ int main() {
  * 编译方式2:
  * gcc -c main2.c
  * gcc -static -o prog2c main2.o -L. -lvector
+ * 
+ * 错误编译方式：
+ * gcc -static ./libvector.a main2.c
+/usr/bin/ld: /tmp/ccz2HvvT.o: in function `main':
+main2.c:(.text+0x2c): undefined reference to `addvec'
+collect2: error: ld returned 1 exit status
 */
