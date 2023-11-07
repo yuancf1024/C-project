@@ -12,6 +12,7 @@ int main() {
 }
 
 /**
+ * 静态链接
  * 编译方式1:
  * gcc -c main2.c
  * gcc -static -o prog2c main2.o ./libvector.a
@@ -25,4 +26,10 @@ int main() {
 /usr/bin/ld: /tmp/ccz2HvvT.o: in function `main':
 main2.c:(.text+0x2c): undefined reference to `addvec'
 collect2: error: ld returned 1 exit status
+ * 
+ * 动态链接
+ * 编译
+ * gcc -shared -fpic -o libvector.so addvec.c multvec.c
+ * 链接
+ * gcc -o prog21 main2.c ./libvector.so
 */
