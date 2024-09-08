@@ -4,6 +4,10 @@
     打印华氏温度与摄氏温度对照表
 */
 
+#define LOWER 0     // 转换表的最小值下限
+#define UPPER 300   // 转换表的上限
+#define STEP 20     // 步长
+
 int main() {
     float fahr, celsius;
     float lower, upper, step;
@@ -27,5 +31,12 @@ int main() {
         fahr += step;
     }
 
+    // 摄氏温度转华氏度
+    // 打印标题
+    printf("%6s\t%3s\n", c, f);
+
+    for (celsius = UPPER; celsius >= LOWER; celsius-=STEP) {
+        printf("%6.1f\t%3.0f\n", celsius, (celsius*(9.0/5.0))+32.0);
+    }
     return 0;
 }

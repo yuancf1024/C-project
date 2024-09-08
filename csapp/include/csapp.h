@@ -52,7 +52,7 @@ typedef struct {
 /* $end rio_t */
 
 /* External variables */
-// extern int h_errno;    /* Defined by BIND for DNS errors */ 
+extern int h_errno;    /* Defined by BIND for DNS errors */ // 2023-11-07 注释掉以消除重复定义的报错
 extern char **environ; /* Defined by libc */
 
 /* Misc constants */
